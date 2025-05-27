@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button id="modalOpen">+</button>
     <div id="modalWindow" class="modal">
-        <form action="/submit" method="post">
+        <div id="modal-content"><form action="/submit" method="post">
             <fieldset> 
             <legend>Details</legend>
             <label id="title-label" for="title">Title: </label>
@@ -27,7 +28,7 @@
             <button id="submit" type="submit">Add</button>
             </fieldset>
             <button id="modalClose">Close</button>
-        </form>
+        </form></div>
     </div>
     
         
