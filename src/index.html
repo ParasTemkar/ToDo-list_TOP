@@ -9,31 +9,24 @@
     <button id="modalOpen">+</button>
     <div id="modalWindow" class="modal">
         <form action="/submit" method="post">
-            <fieldset> ..............................................................................................
+            <fieldset> 
             <legend>Details</legend>
             <label id="title-label" for="title">Title: </label>
             <input required id="title" type="text"  name="title"  min-length="1" max-length="130">
             
             <label id="note-label" for="note">Note: </label>
             <input id="note" type="text" name="note" min-length="1" max-length="130">
-            
-            <label id="pages-label" for="pages" >Number of pages: </label>
-            <input id="pages" type="number" name="pages">
-            
-            <label id="read-label" for="read" >Have you read?: </label>
-            Yes<input type="radio" class="read" name="read" value="yes">
-            No<input type="radio" class="read" name="read" value="no">
 
             <label for="priority" id="priority-label" >priority level: </label>
             <select id="priority" name="priority">
                 <option value="low">Low</option>
-                <option value="medium" selected>medium</option>
+                <option value="medium" selected>Medium</option>
                 <option value="high">High</option>
             </select>
             
-
             <button id="submit" type="submit">Add</button>
             </fieldset>
+            <button id="modalClose">Close</button>
         </form>
     </div>
     
