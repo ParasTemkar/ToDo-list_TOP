@@ -1,7 +1,7 @@
 import { ToDo } from "./todoCreate"; 
+import { myLibrary, renderTodos } from "./todoView";
 
 const modalWindow = document.querySelector('#modalWindow');
-const myLibrary = [];
 
 document.querySelector('#modalOpen').addEventListener('click', () => modalWindow.style.display = "block");
 document.querySelector('#modalClose').addEventListener('click', () => modalWindow.style.display = "none");
@@ -16,7 +16,7 @@ document.getElementById("todo-form").addEventListener("submit", (event) => {
 
   const todo = new ToDo(title, note, duedate, priority);
   myLibrary.push(todo);
-
+  renderTodos();
   console.log(todo);
 
   modalWindow.style.display = "none";
