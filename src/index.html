@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="styles.css">
+    
 </head>
-<body>
+<body> 
     <button id="modalOpen">+</button>
     <div id="modalWindow" class="modal">
-        <div id="modal-content"><form action="/submit" method="post">
+        <div id="modal-content"><form id ="todo-form" action="/submit" method="post">
             <fieldset> 
             <legend>Details</legend>
             <label id="title-label" for="title">Title: </label>
-            <input required id="title" type="text"  name="title"  min-length="1" max-length="130">
+            <input required id="title" type="text"  name="title"  min-length="1" max-length="130"><br>
             
             <label id="note-label" for="note">Note: </label>
-            <input id="note" type="text" name="note" min-length="1" max-length="130">
+            <textarea id="note" rows="4" cols="30" name="note" minlength="1" maxlength="130"></textarea><br>
+
+            <label id="date-label" for="date">Date: </label>
+            <input id="date" type="date" name="date"><br>
 
             <label for="priority" id="priority-label" >priority level: </label>
             <select id="priority" name="priority">
                 <option value="low">Low</option>
                 <option value="medium" selected>Medium</option>
                 <option value="high">High</option>
-            </select>
+            </select><br>
             
             <button id="submit" type="submit">Add</button>
             </fieldset>
