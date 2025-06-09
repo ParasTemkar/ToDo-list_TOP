@@ -16,7 +16,7 @@ todoForm.addEventListener("submit", (event) => {
 
   const title = document.querySelector("input[name='title']").value;
   const note = document.querySelector("textarea[name='note']").value;
-  const duedate = document.querySelector("input[name='date']").value;
+  let duedate = document.querySelector("input[name='date']").value;
   const priority = document.querySelector("select[name='priority']").value;
 
   const todo = new ToDo(title, note, duedate, priority);

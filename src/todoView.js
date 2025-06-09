@@ -11,9 +11,11 @@ function renderTodos() {
     card.innerHTML = `
       <h3>${todo.title}</h3>
       <p><strong>Note:</strong> ${todo.note}</p>
-      <p><strong>Due Date:</strong> ${todo.duedate.toDateString()}</p>
       <p><strong>Priority:</strong> ${todo.priority}</p>
     `;
+    if(todo.duedate instanceof Date && !isNaN(todo.duedate.getTime())){
+      card.innerHTML += `<p><strong>Due Date:</strong> ${todo.duedate.toDateString()}</p>`;
+    }
 
     container.appendChild(card);
   });
