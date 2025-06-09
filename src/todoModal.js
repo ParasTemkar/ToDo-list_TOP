@@ -2,11 +2,15 @@ import { ToDo } from "./todoCreate";
 import { myLibrary, renderTodos } from "./todoView";
 
 const modalWindow = document.querySelector('#modalWindow');
+const todoForm = document.getElementById("todo-form"); 
 
 document.querySelector('#modalOpen').addEventListener('click', () => modalWindow.style.display = "block");
-document.querySelector('#modalClose').addEventListener('click', () => modalWindow.style.display = "none");
+document.querySelector('#modalClose').addEventListener('click', () => {
+  modalWindow.style.display = "none";
+  todoForm.reset(); 
+});
 
-document.getElementById("todo-form").addEventListener("submit", (event) => {
+todoForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const title = document.querySelector("input[name='title']").value;
@@ -16,8 +20,9 @@ document.getElementById("todo-form").addEventListener("submit", (event) => {
 
   const todo = new ToDo(title, note, duedate, priority);
   myLibrary.push(todo);
+
   renderTodos();
-  console.log(todo);
 
   modalWindow.style.display = "none";
+  todoForm.reset();
 });

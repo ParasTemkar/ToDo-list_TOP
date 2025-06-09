@@ -25,7 +25,7 @@ module.exports = {
     ],
     hot: true,
     open: true,
-    port: 8080,
+    port: 0,
     // historyApiFallback: true, // Useful for single-page applications (SPAs) with client-side routing
   },
   plugins: [

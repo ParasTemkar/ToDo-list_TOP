@@ -4,7 +4,7 @@ function renderTodos() {
   const container = document.getElementById("container");
   container.innerHTML = ""; 
 
-  myLibrary.forEach((todo, index) => {
+  myLibrary.forEach((todo) => {                                                                                                                                                                                                                                                                                                                          
     const card = document.createElement("div");
     card.classList.add("todo-card");
     
