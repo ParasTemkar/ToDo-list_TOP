@@ -1,4 +1,6 @@
-const myLibrary = [];
+
+const todosString = localStorage.getItem('todos');  
+const myLibrary = JSON.parse(todosString);
 
 function renderTodos() {
   const container = document.getElementById("container");
@@ -17,8 +19,14 @@ function renderTodos() {
       card.innerHTML += `<p><strong>Due Date:</strong> ${todo.duedate.toDateString()}</p>`;
     }
 
+    card.innerHTML += `<button class="deleteButton" id="${todo.title}" >Delete</button>`
+
     container.appendChild(card);
   });
 }
+
+// function deleteTodos(){
+//   document.getElementsByClassName("deleteButton").addEventListener('click', () => );
+// }
 
 export {myLibrary, renderTodos};

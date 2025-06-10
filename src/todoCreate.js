@@ -8,15 +8,11 @@ constructor(title, note, duedate, priority) {
     const date = new Date(duedate);
     this.duedate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
-    const priorityOptions = ['high', 'medium', 'low'];
-    if (priorityOptions.includes(priority)) {
-        this.priority = priority;
-    } else {
-        this.priority = 'low'; 
-    }
+    this.priority = priority;
 }
 
 
+ 
 }
 
 export {ToDo};

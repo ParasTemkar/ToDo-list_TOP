@@ -7,12 +7,16 @@
     
 </head>
 <body> 
-    <div id="navBar">
+    <nav id="navBar">
         <div id="highPrio"></div>
         <div id="medPrio"></div>
         <div id="lowPrio"></div>
-    </div>
-    <h2>Your Tasks</h2>
+    </nav>
+    <header id="topbar">
+        <h2>Your Tasks</h2>
+    </header>
+    
+    <main>
     <div id="container"></div>
     <button id="modalOpen">+</button>
     <div id="modalWindow" class="modal">
@@ -30,8 +34,8 @@
 
             <label for="priority" id="priority-label" >priority level: </label>
             <select id="priority" name="priority">
-                <option value="low">Low</option>
-                <option value="medium" selected>Medium</option>
+                <option value="low" selected>Low</option>
+                <option value="medium">Medium</option>
                 <option value="high">High</option>
             </select><br>
             
@@ -40,7 +44,7 @@
             <button id="modalClose">Close</button>
         </form></div>
     </div>
-    
+    </main>
         
     </div>
 </body>
