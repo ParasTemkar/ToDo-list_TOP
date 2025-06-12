@@ -10,8 +10,5 @@ constructor(title, note, duedate, priority) {
     this.id = Date.now();
 }
 
-
- 
 }
-
 export {ToDo};

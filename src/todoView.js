@@ -25,6 +25,7 @@ function renderTodos() {
 
     container.appendChild(card);
   });
+  console.log("Todos rendered")
 }
 
 export { myLibrary, renderTodos };

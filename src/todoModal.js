@@ -1,4 +1,4 @@
-import { ToDo } from "./todoCreate"; 
+import { ToDo } from "./todoClass"; 
 import { myLibrary, renderTodos } from "./todoView";
 import {storeTodos} from "./todoStorage";
 
